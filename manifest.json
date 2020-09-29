@@ -1,0 +1,23 @@
+{
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "red.png",
+      "default_title": "Extract HTML"      
+   },
+   "content_scripts": [ {
+      "css": [ "styleskb.css" ],
+      "js": [ "jquery-3.1.1.min.js", "jquery-ui.min.js", "jquery_extenstion.js", "clipboard.min.js" ],
+      "matches": [ "<all_urls>" ]
+   } ],
+   "description": "Displays DOM item details (path, id, class name) when mousing over it.",
+   "icons": {
+      "128": "icon128.png",
+      "48": "icon48.png"
+   },
+   "manifest_version": 2,
+   "name": "Element HTML Extractor",
+   "permissions": [ "tabs", "http://*/*", "https://*/*", "storage", "activeTab" ],   
+   "version": "1.6"
+}
